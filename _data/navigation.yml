@@ -1,0 +1,11 @@
+- name: Home
+  link: /
+- name: Quotes
+  link: /quotes.html
+- name: Blog
+  link: /blog.html
+- name: Members
+  link: /members.html
+- name: About
+  link: /about.html
+  
