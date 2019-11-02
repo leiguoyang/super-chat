@@ -1,0 +1,18 @@
+---
+title: Quotes
+---
+
+<h1>Quotes</h1>
+<p>Quotes from our daily chats.</p>
+<div>
+{% for quote in site.data.quotes %}
+<div class="card quotes">
+  <div class="card-body">
+    <blockquote class="blockquote mb-0">
+      <p>{{ quote.content }}</p>
+      <footer class="blockquote-footer">By {{ quote.author }}</footer>
+    </blockquote>
+  </div>
+</div>
+{% endfor %}
+</div>
