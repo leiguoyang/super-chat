@@ -2,18 +2,5 @@
 title: Home
 ---
 
-<h1>English corner</h1>
-<p>Slogan comes here </p>
+<h1>Super Chat</h1>
 
-<h2>Upcoming event</h2>
-<!-- The latest event here -->
-
-{% assign sorted_activities = site.activities | sort: 'number' | reverse %}
-{% assign latest_activity = sorted_activities[0] %}
-<div id="latest_activity" style="border: 1px solid #ccc; border-radius: 5px; padding: 20px; background: #f7f7f7;">
-	<h3>Activity #{{ latest_activity.number }}: {{ latest_activity.topic }}</h3>
-	<p>Date: {{ latest_activity.start_date }}</p>
-	<p>Time: {{ latest_activity.time }}</p>
-	<p>Location: {{ latest_activity.location }}</p>
-	{{ latest_activity.content }}
-</div>
