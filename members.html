@@ -4,12 +4,19 @@ title: Members
 <h1>Members</h1>
 
 {% for member in site.members %}
-<div class="card" style="width: 10rem;">
+<div class="card mb-3">
 	{% assign avatar_url = '/images/' | append: member.english_first_name | append: '_' | append: member.english_last_name | append: '.jpg' | downcase %}
-	<img src="{{ avatar_url | prepend: site.baseurl }}" class="card-img-top">
-  <div class="card-body">
-    <h5 class="card-title"><a href="{{ member.url | prepend: site.baseurl }}">{{ member.english_first_name }} {{ member.english_last_name }}</a></h5>
+	<div class="row no-gutters">
+	<div class="col-md-4">
+		<img src="{{ avatar_url | prepend: site.baseurl }}" class="card-img" style="max-width: 96px;">
+	</div>
+	<div class="col-md-8">
+	  <div class="card-body">
+	    <h5 class="card-title"><a href="{{ member.url | prepend: site.baseurl }}">{{ member.english_first_name }} {{ member.english_last_name }}</a>
+	    </h5>
+	  </div>
   </div>
+	</div>
 </div>
 {% endfor %}
 

@@ -8,6 +8,5 @@ role: member
 email_address: leiguoyang@aliyun.com
 ---
 
-Hi, I am Younger. I am the maintainer of this website.
+Hi, I am Younger. I am a maintainer of this website.
 
-My email address is <a href="mailto: leiguoyang@aliyun.com">leiguoyang@aliyun.com</a>.
