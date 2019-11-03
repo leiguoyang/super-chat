@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-<h1>{{ page.english_first_name }} {{ page.english_last_name }}
+<h1 class="mb-4">{{ page.english_first_name }} {{ page.english_last_name }}
 {% if page.role == 'founder' %}
 <span class="badge badge-primary">Founder</span>
 {% endif %}
 </h1>
 {% assign avatar_url = '/images/' | append: page.english_first_name | append: '_' | append: page.english_last_name | append: '.jpg' | downcase %}
-<img src="{{ avatar_url | prepend: site.baseurl }}" class="img-fluid">
+<img src="{{ avatar_url | prepend: site.baseurl }}" class="img-fluid rounded-lg mb-3" style="max-width: 398px;">
 <!-- add the avatar here -->
 
 {{ content }}
