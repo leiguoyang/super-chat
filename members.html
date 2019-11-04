@@ -7,13 +7,13 @@ Feel interested in our members? Please click the link below to visit their profi
 
 {% assign sorted_members = site.members | sort: 'id' %}
 
-{% for member in sorted_members %}
 <div class="members">
+{% for member in sorted_members %}
 	{% assign avatar_url = '/images/' | append: member.english_first_name | append: '_' | append: member.english_last_name | append: '.jpg' | downcase %}
 	<div class="member py-3 border-bottom">
 		<img src="{{ avatar_url | prepend: site.baseurl }}" class="align-middle mr-3 rounded" style="width: 64px;">
 	  <a href="{{ member.url | prepend: site.baseurl }}">{{ member.english_first_name }} {{ member.english_last_name }}</a>
 	</div>
-</div>
 {% endfor %}
+</div>
 
