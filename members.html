@@ -3,7 +3,9 @@ title: Members
 ---
 <h1>Members</h1>
 
-{% for member in site.members %}
+{% assign sorted_members = site.members | sort: 'id' %}
+
+{% for member in sorted_members %}
 <div class="card mb-3">
 	{% assign avatar_url = '/images/' | append: member.english_first_name | append: '_' | append: member.english_last_name | append: '.jpg' | downcase %}
 	<div class="row no-gutters">
