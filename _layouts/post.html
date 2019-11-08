@@ -1,12 +1,16 @@
 ---
 layout: default
 ---
+
+{% assign author = site.members | where: 'english_first_name', page.author | first %}
+{% assign avatar_url = '/images/avatars/' | append: author.english_first_name | append: '_' | append: author.english_last_name | append: '.jpg' | downcase %}
 <h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }}
-{% assign author = site.authors | where, 'short_name', page.author | first %}
+<p>
 {% if author %}
-- <a href="{{ author.url | prepend: site.baseurl }}">{{ author.name }}</a>
+<img src="{{ avatar_url | prepend: site.baseurl }}" class="align-middle mr-1 rounded" style="width: 24px;">
+<a href="{{ author.url | prepend: site.baseurl }}">{{ author.english_first_name }} {{ author.english_last_name }}</a>
 {% endif %}
+| {{ page.date | date_to_string }}
 </p>
 
 {{ content }}
