@@ -6,7 +6,7 @@ layout: default
 <span class="badge badge-primary">Founder</span>
 {% endif %}
 </h1>
-{% assign avatar_url = '/images/' | append: page.english_first_name | append: '_' | append: page.english_last_name | append: '.jpg' | downcase %}
+{% assign avatar_url = '/images/members/' | append: page.english_first_name | append: '_' | append: page.english_last_name | append: '.jpg' | downcase %}
 <img src="{{ avatar_url | prepend: site.baseurl }}" class="img-fluid rounded-lg mb-3">
 <!-- add the avatar here -->
 
