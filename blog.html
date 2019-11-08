@@ -2,12 +2,13 @@
 title: Blog
 ---
 <h1>Latest Posts</h1>
-
-<ul>
+<p>All great stories about Super Chat and our members 😊.</p>
+<div class="posts">
   {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-    </li>
+  <div class="post py-2 border-bottom">
+  	<div class="date text-black-50">{{ post.date | date_to_string }}</div>
+    <h2 class="mt-2"><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+    <p>{{ post.excerpt }}</p>
+  </div>
   {% endfor %}
-</ul>
+</div>
