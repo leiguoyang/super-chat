@@ -6,6 +6,7 @@ english_last_name: Wu
 company: Western Digital
 role: founder
 email_address: ajoe143@qq.com
+title: Joe Wu
 ---
 
 Hi, I am Joe.
