@@ -10,7 +10,7 @@ layout: default
 <img src="{{ avatar_url | prepend: site.baseurl }}" class="align-middle mr-1 rounded" style="width: 24px;">
 <a href="{{ author.url | prepend: site.baseurl }}">{{ author.english_first_name }} {{ author.english_last_name }}</a>
 {% endif %}
-| {{ page.date | date_to_string }}
+| <span class="text-black-50">{{ page.date | date_to_string }}</span>
 </p>
 
 {{ content }}

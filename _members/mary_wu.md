@@ -6,6 +6,7 @@ english_last_name: Wu
 company: Western Digital
 role: member
 email_address:
+title: Mary Wu
 ---
 
 Hi, I am Mary 😜.
